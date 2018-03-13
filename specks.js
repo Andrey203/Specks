@@ -69,6 +69,7 @@ function numRandomCells() {
 
     for (let i=0; i<16; i++) {
         tdList[i].appendChild(document.createTextNode(newArr[i]));
+        if (newArr[i] == "") tdList[i].style.backgroundColor = "#FFDAB9";
         tdList[i].addEventListener("click", replaceTwoCells);
     }
 
@@ -86,7 +87,10 @@ function endGame() {
 function clearCells() {
     var tdList = table.querySelectorAll("td");
     for (let i=0; i<16; i++) {
-        if (tdList[i].lastChild != null) tdList[i].removeChild(tdList[i].lastChild);
+        tdList[i].style.backgroundColor = "#FAFAD2";
+        if (tdList[i].lastChild != null) {
+            tdList[i].removeChild(tdList[i].lastChild);
+        }
     }
 }
 
