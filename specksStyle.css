@@ -1,0 +1,52 @@
+body {
+    background-color: #E6E6FA;
+}
+
+
+#hSpecks {
+    position: absolute;
+    left: 250px;
+    top: 10px;
+    margin: 0px;
+    font: 80px monospace;
+    color: #C71585;
+    text-shadow: 1px 1px 2px black, 0 0 1em #800080;
+}
+ 
+
+    #table {
+      top: 100px;
+      left: 100px;
+      background-color: #F0E68C;
+      width: 500px;
+      height: 500px;
+      margin: 20px;
+      position: relative;
+      border-top: 25px solid #556B2F;
+      border-right: 25px solid #6B8E23;
+      border-bottom: 25px solid #6B8E23;
+      border-left: 25px solid #556B2F;
+      font: 50px monospace;
+      font-weight: 900;
+    }
+
+    td {
+        background-color: #FAFAD2;
+        border-radius: 15px;
+        width: 80px;
+        heght: 80px;
+        border: 3px solid black;
+        padding: 10px;
+        text-align: center;
+    }
+
+#newGameButton {
+   position: relative;
+   border-radius: 10px;
+   background-color: #32CD32;
+   left: 120px;
+   top: 120px;
+   width: 150px;
+   height: 40px;
+   font-weight: 900;
+}
