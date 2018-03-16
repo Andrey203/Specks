@@ -22,12 +22,13 @@ body {
       height: 500px;
       margin: 20px;
       position: relative;
-      border-top: 25px solid #556B2F;
-      border-right: 25px solid #6B8E23;
-      border-bottom: 25px solid #6B8E23;
-      border-left: 25px solid #556B2F;
+      border-top: 25px solid #A0522D;
+      border-right: 25px solid #CD853F;
+      border-bottom: 25px solid #CD853F;
+      border-left: 25px solid #A0522D;
       font: 50px monospace;
       font-weight: 900;
+      box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
     }
 
     td {
@@ -38,15 +39,26 @@ body {
         border: 3px solid black;
         padding: 10px;
         text-align: center;
+        box-shadow: inset 0 0 10px;
     }
 
 #newGameButton {
-   position: relative;
-   border-radius: 10px;
+   position: absolute;
+   border-radius: 40px;
    background-color: #32CD32;
-   left: 120px;
-   top: 120px;
-   width: 150px;
-   height: 40px;
+   left: 10px;
+   top: 118px;
+   width: 110px;
+   height: 80px;
    font-weight: 900;
+   box-shadow: inset 0 0 30px;
+}
+
+#movesNum {
+    position: relative;
+    top: 100px;
+    left: 150px;
+    font: 30px monospace;
+    font-weight: 900;
+
 }
