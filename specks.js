@@ -9,18 +9,19 @@
         for (var j = 0; j < 4; j++) {
             var td = document.createElement("td");
             td.setAttribute("id", "c_" + i + "_" + j);
+            td.setAttribute("class", "cellSpecks");
             fragment.lastChild.appendChild(td);
         }
     }
 
-    table.appendChild(fragment);
+    tableSpecks.appendChild(fragment);
 }
 )();
 
 function Specks() {
     var counter = 0;
 
-    this.numRandomCells = function() {
+    function numRandomCells() {
 
         var arr = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, ""]];
         var x, y;
@@ -73,7 +74,7 @@ function Specks() {
         }
         ;
         var newArr = [].concat(...arr);
-        var tdList = table.querySelectorAll("td");
+        var tdList = tableSpecks.querySelectorAll("td");
 
         for (let i = 0; i < 16; i++) {
             tdList[i].appendChild(document.createTextNode(newArr[i]));
@@ -84,17 +85,11 @@ function Specks() {
 
     }
 
-    function endGame() {
-        var tdList = table.querySelectorAll("td");
-        for (let i = 0; i < 16; i++) {
-            tdList[i].removeEventListener("click", replaceTwoCells);
-        }
-    }
 
-    this.clearCells = function() {
+    function clearCells() {
         counter = 0;
         counterID.innerHTML = 0;
-        var tdList = table.querySelectorAll("td");
+        var tdList = tableSpecks.querySelectorAll("td");
         for (let i = 0; i < 16; i++) {
             tdList[i].style.backgroundColor = "#FAFAD2";
             if (tdList[i].lastChild != null) {
@@ -166,14 +161,59 @@ function Specks() {
         for (let i = 0; i < 16; i++) {
             arrTdList.push(tdList[i].textContent);
         }
-        if (JSON.stringify(arrTdList) == JSON.stringify(arr))
-            endGame();
+        if (JSON.stringify(arrTdList) == JSON.stringify(arr)) endGame();
+    }
+
+    (function score() {
+        var trScore = tScore.querySelectorAll("tr");
+        var arrScore = [];
+        for (let i = 0; i < trScore.length; i++) {
+            trScore[i].firstChild.setAttribute("class", "numScore");
+            trScore[i].children[1].setAttribute("class", "nameScore");
+            trScore[i].children[2].setAttribute("class", "nameScore");
+        }
+        for (let i = 0; i < localStorage.length; i++) {
+            var playerScore = [];
+            var keyScore = localStorage.key(i);
+            var valueScore = localStorage.getItem(keyScore);
+            playerScore.push(keyScore);
+            playerScore.push(valueScore);
+            arrScore.push(playerScore);
+        }
+        arrScore.sort(function(a, b) {
+            return parseInt(a[1]) - parseInt(b[1]);
+        });
+        if (arrScore.length > 10) {
+            localStorage.removeItem(arrScore[10][0]);
+            arrScore.pop();
+        }
+        for (let i = 0; i < localStorage.length; i++) {
+            trScore[i].children[1].innerHTML = arrScore[i][0];
+            trScore[i].children[2].innerHTML = arrScore[i][1];
+        }
+    })()
+
+
+    function endGame() {
+        localStorage.setItem(inputName.value, counter);
+        var tdList = table.querySelectorAll("td");
+        for (let i = 0; i < 16; i++) {
+            tdList[i].removeEventListener("click", replaceTwoCells);
+        }
+        win.style.display = "block";
+    }
+    
+
+    this.newGame = function() {
+        win.style.display = "none";
+        clearCells();
+        numRandomCells();
     }
 }
 
 var specks = new Specks();
 
-specks.numRandomCells();
+specks.newGame();
 
-newGameButton.addEventListener("click", specks.clearCells);
-newGameButton.addEventListener("click", specks.numRandomCells);
+newGameButton.addEventListener("click", specks.newGame);
+
