@@ -104,7 +104,7 @@ function Specks() {
         var x = e.getAttribute("id").split("_")[1];
         var y = e.getAttribute("id").split("_")[2];
         var emptyCell;
-        var tdList = table.querySelectorAll("td");
+        var tdList = tableSpecks.querySelectorAll("td");
         for (let i = 0; i < 16; i++) {
             if (tdList[i].textContent == "") {
                 emptyCell = tdList[i];
