@@ -11,7 +11,12 @@ function start() {
 
     app.use(express.static(htmlPath));
 
-    app.listen(1986);
+    app.get("/", function(request, response){
+
+        response.sendFile(__dirname + "/html/specks.html");
+    });
+
+    app.listen(3030);
 }
 
 
