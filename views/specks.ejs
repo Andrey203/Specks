@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <link href="../css/specksStyle.css" rel="stylesheet">
+    <link href="../css/header.css" rel="stylesheet">
+    <link href="../css/content.css" rel="stylesheet">
+    <link href="../css/describeSpecks.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+    <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&subset=latin,latin-ext'>
+    <link rel="stylesheet" href="../css/formStyle.css">
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <header id="header">
+
+        <form method="get" action="/logout" name="logout">
+            <input class="checkButton red" id="checkOut" type="button" value="Sign out">
+        </form>
+        <input class="checkButton blue" rel="popup1" id="checkIn" type="button" value="Login / Register">
+    </header>
+<div id="content">
+    <h1 id="specksName">Specks</h1>
+
+    <div class="overlay"></div>
+
+        <div id="popup1" class="materialContainer">
+
+
+            <div class="box">
+                <form method="post" action="/specks" id="signin" name="specks">
+
+                <div class="title">LOGIN</div>
+
+                <div class="input">
+                    <label for="name">Username</label>
+                    <input type="text" name="username" id="name">
+                    <span class="spin"></span>
+                </div>
+
+                <div class="input">
+                    <label for="pass">Password</label>
+                    <input type="password" name="password" id="pass">
+                    <span class="spin"></span>
+                </div>
+
+                <div class="button login">
+                    <button type="submit" id="submitBoxButton"><span>GO</span> <i class="fa fa-check"></i></button>
+                </div>
+
+                <a href="" class="pass-forgot">Forgot your password?</a>
+                </form>
+
+            </div>
+
+            <div class="overbox">
+                <form method="post" action="/signup" id="signup" name="signup">
+                <div class="material-button alt-2"><span class="shape"></span></div>
+
+                <div class="title">REGISTER</div>
+
+                <div class="input">
+                    <label for="regname">Username</label>
+                    <input type="text" name="username" id="regname">
+                    <span class="spin"></span>
+                </div>
+
+                <div class="input">
+                    <label for="regpass">Password</label>
+                    <input type="password" name="password" id="regpass">
+                    <span class="spin"></span>
+                </div>
+
+                <div class="input">
+                    <label for="reregpass">Repeat Password</label>
+                    <input type="password" name="reregpass" id="reregpass">
+                    <span class="spin"></span>
+                </div>
+
+                <div class="button">
+                    <button type="submit"><span>NEXT</span></button>
+                </div>
+
+                </form>
+            </div>
+
+        </div>
+
+<table id="tableSpecks"></table>
+
+    <input id="newGameButton" type="button" value="NEW GAME">
+
+<div id="movesNum">Moves quantity:
+    <b id="counterID">0</b></div>
+<div id="win">YOU WON!!!</div>
+
+    <div class="describeText">
+        <span class="strongText"><span id="desText1">Игра в 15, пятнашки, такен</span></span>
+        <span id="desText2"> — попу-</span><br><span id="desText3">лярная головоломка, придуманная в 1878 году Ноем Чепмэном.
+            Представ-</span><br><span id="desText4">ляет собой набор одинаковых квад-</span><br><span id="desText5">ратных
+            костяшек с нанесёнными на них числами, заключённых в квад-</span><br><span id="desText6">ратную коробку.
+            Длина стороны ко-</span><br><span id="desText7">робки в четыре раза больше длины стороны костяшек для набора
+            из 15 элементов, соответственно в короб-</span><br><span id="desText8">ке остаётся незаполненным одно</span><br>
+            <span id="desText9">квадратное поле. Цель игры — пе-</span><br><span id="desText10">ремещая костяшки по коробке,
+            до-</span><br><span id="desText11">биться упорядочивания их по номе-</span><br><span id="desText12">рам,
+            желательно сделав как можно меньше перемещений.</span>
+    </div>
+
+</div>
+<script src="../js/engineSpecks.js"></script>
+<script src="../js/form.js"></script>
+<script src="../js/animatedText.js"></script>
+</body>
+
+</html>

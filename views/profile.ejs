@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <link href="../css/specksStyle.css" rel="stylesheet">
+    <link href="../css/header.css" rel="stylesheet">
+    <link href="../css/content.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+    <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&subset=latin,latin-ext'>
+    <link rel="stylesheet" href="../css/formStyle.css">
+    <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <header>
+
+        <form method="get" action="/logout" name="logout">
+            <input class="checkButton red" id="checkOut" type="submit" value="Sign out">
+        </form>
+
+        <div id="personName">Your name: <%= person %></div>
+
+    </header>
+<div id="content">
+
+    <h1 id="specksName">Specks</h1>
+
+        <div class="overlay"></div>
+
+        <div id="popup1" class="materialContainer">
+
+
+            <div class="box">
+                <form method="post" action="/profile" id="formBox">
+
+                    <div class="title">LOGIN</div>
+
+                    <div class="input">
+                        <label for="name">Username</label>
+                        <input type="text" name="username" id="name">
+                        <span class="spin"></span>
+                    </div>
+
+                    <div class="input">
+                        <label for="pass">Password</label>
+                        <input type="password" name="password" id="pass">
+                        <span class="spin"></span>
+                    </div>
+
+                    <div class="button login">
+                        <button type="submit"><span>GO</span> <i class="fa fa-check"></i></button>
+                    </div>
+
+                    <a href="" class="pass-forgot">Forgot your password?</a>
+                </form>
+
+            </div>
+
+            <div class="overbox">
+                <div class="material-button alt-2"><span class="shape"></span></div>
+
+                <div class="title">REGISTER</div>
+
+                <div class="input">
+                    <label for="regname">Username</label>
+                    <input type="text" name="username" id="regname">
+                    <span class="spin"></span>
+                </div>
+
+                <div class="input">
+                    <label for="regpass">Password</label>
+                    <input type="password" name="password" id="regpass">
+                    <span class="spin"></span>
+                </div>
+
+                <div class="input">
+                    <label for="reregpass">Repeat Password</label>
+                    <input type="password" name="reregpass" id="reregpass">
+                    <span class="spin"></span>
+                </div>
+
+                <div class="button">
+                    <button><span>NEXT</span></button>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    <table id="tableSpecks"></table>
+
+    <img id="pageScore" src="../images/page26c0ff.jpg">
+    <div id="titleScore">
+            Total score
+    </div>
+
+    <table id="tableScore">
+        <tr><td>Position</td><td class="centerTableScore">User</td><td>Moves</td></tr>
+        <tr><td>1</td><td class="centerTableScore"></td><td></td></tr>
+        <tr><td>2</td><td class="centerTableScore"></td><td></td></tr>
+        <tr><td>3</td><td class="centerTableScore"></td><td></td></tr>
+        <tr><td>4</td><td class="centerTableScore"></td><td></td></tr>
+        <tr><td>5</td><td class="centerTableScore"></td><td></td></tr>
+        <tr><td>6</td><td class="centerTableScore"></td><td></td></tr>
+        <tr><td>7</td><td class="centerTableScore"></td><td></td></tr>
+        <tr><td>8</td><td class="centerTableScore"></td><td></td></tr>
+        <tr><td>9</td><td class="centerTableScore"></td><td></td></tr>
+        <tr><td>10</td><td class="centerTableScore"></td><td></td></tr>
+    </table>
+
+    <input id="newGameButton" type="button" value="NEW GAME">
+
+    <div id="movesNum">Moves quantity:
+        <b id="counterID">0</b></div>
+    <div id="win">YOU WON!!!</div>
+
+</div>
+<script src="../js/engineSpecks.js"></script>
+<script src="../js/form.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+@font-face {
+    font-family: Staccato555 TL;
+    src: url(../fonts/14392.otf);
+}
+
+header {
+    background-image: url(../images/web-3175782__340.jpg);
+    position: relative;
+    height: 65px;
+    margin: 30px 30px 0 30px;
+    padding-right: 15px;
+    border: 2px solid black;
+    border-radius: 25px 25px 0 0;
+    box-shadow: inset 0 0 30px #000000;
+}
+
+#personName {
+    position: relative;
+    margin: 5px 30px 5px 5px;
+    float: right;
+    font-size: 3em;
+    font-family: "Staccato555 TL", cursive;
+    color: white;
+    text-shadow: 0 0 0.4em rgb(255, 179, 35),
+    0 0 0.4em rgba(255, 179, 35, 0.76),
+    0 0 0.4em rgba(255, 179, 35, 0.52);
+}
+
+input.checkButton {
+    position: relative;
+    float: right;
+    margin: 1%;
+    font-family: Arial,Helvetica,FreeSans,"Liberation Sans","Nimbus Sans L",sans-serif;
+    font-size: 1.4em;
+    font-weight: 700;
+    color: rgb(245,245,245);
+    text-shadow: 0 -1px rgba(0,0,0,.1);
+    text-decoration: none;
+    user-select: none;
+    padding: .3em 1em;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    -webkit-animation: pulsate 1.2s linear infinite;
+    animation: pulsate 1.2s linear infinite;
+}
+input.checkButton:hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+    cursor: pointer;
+}
+input.checkButton:active {
+    color: #fff;
+    text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;
+    box-shadow: 0 -1px 3px rgba(0,0,0,.3), 0 1px 1px #fff, inset 0 1px 2px rgba(0,0,0,.8), inset 0 -1px 0 rgba(0,0,0,.05);
+}
+@-webkit-keyframes pulsate {
+    50% {color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;}
+}
+@keyframes pulsate {
+    50% {color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;}
+}
+.red {
+    background: #9c2312 linear-gradient(#d16f74, #9c3019);
+    box-shadow: inset #de9081 0 -1px 1px, inset 0 1px 1px #ffb1a6, #b65232 0 0 0 1px, rgba(0, 0, 0, 0.3) 0 2px 5px;
+}
+.blue {
+    background: #17219c linear-gradient(#7178d1, #17249c);
+    box-shadow: inset #8695de 0 -1px 1px, inset 0 1px 1px #a6a4ff, #3447b6 0 0 0 1px, rgba(0, 0, 0, 0.3) 0 2px 5px;
+}
+

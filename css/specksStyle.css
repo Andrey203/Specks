@@ -1,0 +1,84 @@
+@font-face {
+    font-family: EFN OknoFont;
+    src: url(../fonts/13921.ttf);
+}
+
+    #tableSpecks {
+      top: 1%;
+      left: 11%;
+      background-color: #F0E68C;
+      width: 500px;
+      height: 500px;
+      margin: 20px;
+      position: relative;
+      border-top: 25px solid #A0522D;
+      border-right: 25px solid #CD853F;
+      border-bottom: 25px solid #CD853F;
+      border-left: 25px solid #A0522D;
+      font: 50px fantasy;
+      font-weight: 900;
+      box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+    }
+
+    .cellSpecks {
+        background-color: #FAFAD2;
+        border-radius: 15px;
+        width: 80px;
+        border: 3px solid black;
+        padding: 10px;
+        text-align: center;
+        box-shadow: inset 0 0 10px;
+    }
+
+#newGameButton {
+    position: absolute;
+    left: 25px;
+    top: 150px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 -1px rgba(0,0,0,.5);
+    user-select: none;
+    padding: .7em 1.5em;
+    border: 1px solid rgb(80,32,0);
+    border-radius: 5px;
+    outline: none;
+    background: rgb(159, 87, 36) linear-gradient(rgb(125, 72, 29), rgb(159, 90, 36) 80%);
+    box-shadow:
+            0 6px rgb(86,38,6),
+            0 3px 15px rgba(0,0,0,.4),
+            inset 0 1px rgba(255,255,255,.3),
+            inset 0 0 3px rgba(255,255,255,.5);
+    transition: .2s;
+}
+#newGameButton:hover {
+    background: rgb(198, 113, 44) linear-gradient(rgb(156, 90, 36), rgb(197, 113, 44) 80%);
+}
+#newGameButton:active {
+    background: rgb(140, 79, 27) linear-gradient(rgb(140, 78, 28) 20%, rgb(187, 105, 43));
+    box-shadow:
+            0 2px rgb(86,38,6),
+            0 1px 6px rgba(0,0,0,.4),
+            inset 0 1px rgba(255,255,255,.3),
+            inset 0 0 3px rgba(255,255,255,.5);
+    -webkit-transform: translate(0, 4px);
+    transform: translate(0, 4px);
+}
+
+#movesNum {
+    position: relative;
+    top: 1%;
+    left: 15%;
+    font-family: "EFN OknoFont", cursive;
+    font-size: 48px;
+    color: #c14700;
+    text-shadow: 0 0 40px rgb(255, 255, 255),
+    0 0 20px rgb(255, 255, 255),
+    0 0 10px rgb(255, 255, 255),
+    0 0 5px rgb(255, 255, 255),
+    0 0 2px rgb(255, 255, 255);
+}
+
+#counterID {
+    margin-left: 2%;
+}
